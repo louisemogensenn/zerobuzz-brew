@@ -18,7 +18,15 @@ a {
     color: var(--skriftfarve); /* Gør linksene sorte i stedet for lilla-blå */
 }
 
+.overskrift {
+    text-align: center; /* Placerer overskriften på hver side det samme sted for at skabe kontinuitet */
+    padding: 2% 0 0;
+    font-size: 5.5rem;
+    font-weight: lighter;
+}
+
 /* --------------------- STYLING AF NAVIGATIONSLINJE --------------------- */
+
 .navigationslinje {
     display: flex; /* Logo og links i navigationslinje står på en vandret linje */
     justify-content: space-between; /* Placerer logo og links i hver sin 'ende' af flexboxen */
@@ -44,6 +52,7 @@ a {
     box-shadow: 0 4px 8px #000; /* Skyggeeffekt i dropdown-indhold */
     list-style-type: none; /* Fjern punkttegn fra dropdown listeelementer */
     padding: 0;
+    font-weight: lighter;
 }
 
 /* Styling af dropdown-indhold links */
@@ -55,6 +64,7 @@ a {
 
 .dropdown li .dropdown-indhold :hover {
     text-decoration: underline; /* Ved hover over dropdown-indholder kommer der underline for at tydeliggøre, hvor musen er*/
+
 }
 
 /* --------------------- STYLING AF FORSIDE --------------------- */
@@ -62,17 +72,46 @@ a {
     display: flex;
     justify-content: space-around; /* Placerer billedet og teksten med let afstand til hiannden*/
     align-items: center; /* Teksten placeres i midten af billedet vertikalt */
+    transition: 2s;
 }
 
 #forside-tekst {
     font-size: 4.5rem; /* Skriftstørrelsen på teksten på forsiden */
-
 }
 
 #forside-billede {
     width: 70vh; /* Billedets størrelse */
 }
 
-/* --------------------- STYLING AF ALKOHOLFRI ØL ---------------------*/
+/* --------------------- STYLING AF OVERSIGT OVER ALKOHOLFRI ØL ---------------------*/
+
+
+.alkoholfri-oel-variant {
+    width: 15%; /* Billederne får den samme størrelse*/
+    padding: 0 5%;
+    border-radius: 15px; /* Gør kanterne bløde*/
+}
+
+#billeder-af-alkoholfri-oel-varianter {
+    display: flex;
+    justify-content: center;
+}
+
+#varianter {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL ---------------------*/
+.alkoholfri-oel-variant {
+    display: flex;
+    justify-content: space-around;
+}
+
+.kalorieindhold {
+    display: flex;
+    justify-content: center;
+}
+
 
 
