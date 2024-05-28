@@ -126,105 +126,87 @@ li {
 /* --------------------- STYLING AF SORTIMENT-SIDE ---------------------*/
 
 .sortiment-overblik {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: flex; 
+    flex-direction: row; /* De tre billeder på sortiementsiden placeres på række*/
+    justify-content: center; /* Billederne placeres i midten*/
 }
 
 .sortimentbillede-og-tekst {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: light;
+    display: flex; 
+    flex-direction: column; /* Sortimentbilledet og den tilhørene tekst placeres ovenpå hinanden */
+    align-items: center; /* Teksten placeres i midten under det tilhørende billede */
+    font-size: 1.5rem; /* Størrelsen på skriften */
 }
 
 .alkoholfri-oel-variant {
-    width: 30vh;
-    height: 50vh;
+    width: 30vh; /* Hvert billede fylder */
+    height: 50vh; /* Hvert billede fylder */
     padding: 0 5vh; /* Skaber afstand mellem billederne*/
-}
-
-#billeder-af-alkoholfri-oel-varianter {
-    display: flex;
-    justify-content: center;
-}
-
-#varianter {
-    display: flex;
-    justify-content: space-around;
 }
 
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL ---------------------*/
 
+.pil-tilbage-til-sortiment {
+    margin-left: 10vh; /* Pilen tilbage til sortiment rykkes ind fra kanten*/
+}
+
 .alkoholfri-oel-variant-billede {
-    display: block;
-    width: 40vh;
-    height: auto;
-    margin-left: 10vh;
+    width: 40vh; /* Bredden på billedet*/
+    height: auto; 
 }
 
 .alkoholfri-oel-information {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Placerer tekst og billede på linje */
     margin: 0 30vh; /* Al indhold placeres i midten af siden */
 }
 
 .alkoholfri-oel-tekstinformation {
     display: flex;
-    flex-direction: column;
-    margin-left: 2vh;
+    flex-direction: column; /* Al indhold placeres i midten af beholderen og stilles op i vertikal kolonne */
+    margin-left: 2vh; /* Teksten rykkes til højre for billedet */
 }
 
 .alkoholfri-oel-overskrift {
-    font-weight: lighter;
-    font-size: 3.5rem;
-    margin: 0;
-    align-self: center;
-}
-
-.kalorieindhold {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
+    font-weight: lighter; /* Overskiften bliver tyndere */
+    font-size: 3.5rem; /* Størrelsen på overskriften */
+    margin: 0; /* Fjerner al margin */
+    align-self: center; /* Placerer overskriften i midten */
 }
 
 .knap-til-brygningsproces {
-    font-family: Sniglet, 'Times', sans-serif;
-    font-weight: bold;
-    background-color: var(--primaerFarve);
-    color: white;
-    margin-top: 2vh;
-    padding: 1.5vh 3vh;
-    font-size: 2rem;
-    align-self: center;
+    font-family: Sniglet, 'Times', sans-serif; /* Ændrer fonten i knappen */
+    font-weight: bold; /* Gør fonten tykkere*/
+    background-color: var(--primaerFarve); /* Sætter farven til den primære farve */
+    color: white; /* Font-farve */
+    margin-top: 2vh; /* Skaber afstand til tekststykket over */
+    padding: 1.5vh 3vh; /* Størrelsen på 'knappen' */
+    font-size: 2rem; /* Fontens størrelse */
+    align-self: center; /* 'Knappen' placeres i midten af beholderen*/
 }
 
 #link-til-events {
-    text-decoration: underline;
+    text-decoration: underline; /* Linket til events i skovbær-øllen har underline for at tydeliggøre, at det er et link*/
 }
 
 /* --------------------- STYLING AF BRYGNINGSPROCES ---------------------*/
 
 #brygningsproces-indhold {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 30vh;
+    flex-direction: column; /* Indholdet placeres oven på hianden*/
+    margin: 0 30vh; /* Placerer indholdet i midten */
 }
 
 #brygningsproces-billede {
-    rotate: 90deg;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    rotate: 90deg; /* Billedet er roteret */
+    margin-left: auto; /* Billedet placeres i midten */
+    margin-right: auto; /* Billedet placeres i midten */
+    width: 50%; /* Billedet placeres i midten */
 }
 
 #brygningsproces-billede-reference {
-    text-align: center;
-    margin-top: -2vh;
-    color: grey;
-    font-style: italic;
+    text-align: center; /* Placeres under billedet */
+    margin-top: -4vh; /* Skaber mindre afstand til billedet */
+    color: grey; /* Får en grå farve så det ligner et link*/
+    font-style: italic; /* Giver skråskrift så det ligner et link */
 }
 
