@@ -135,10 +135,13 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.5rem;
+    font-weight: light;
 }
 
 .alkoholfri-oel-variant {
-    width: 25vh;
+    width: 30vh;
+    height: 50vh;
     padding: 0 5vh; /* Skaber afstand mellem billederne*/
 }
 
@@ -164,7 +167,7 @@ li {
 .alkoholfri-oel-information {
     display: flex;
     justify-content: center;
-    margin: 0 30vh;
+    margin: 0 30vh; /* Al indhold placeres i midten af siden */
 }
 
 .alkoholfri-oel-tekstinformation {
@@ -200,3 +203,28 @@ li {
 #link-til-events {
     text-decoration: underline;
 }
+
+/* --------------------- STYLING AF BRYGNINGSPROCES ---------------------*/
+
+#brygningsproces-indhold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30vh;
+}
+
+#brygningsproces-billede {
+    rotate: 90deg;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#brygningsproces-billede-reference {
+    text-align: center;
+    margin-top: -2vh;
+    color: grey;
+    font-style: italic;
+}
+
