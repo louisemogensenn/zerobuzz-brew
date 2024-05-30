@@ -40,6 +40,10 @@ li {
     width: 60vh;    
 }
 
+.menu-knap {
+    display: none; /* Burgermenu-ikonet vises ikke i desktopview*/
+}
+
 .navigationsliste-i-desktop {
     display: flex; /* Placerer links på horisontal række */
     justify-content: space-around; /* Placerer links længst til højre*/
@@ -50,37 +54,6 @@ li {
 .navigationslink {
     position: relative; /* Gør, at dropdown vises ved hover*/
     padding: 0 20px; /* Sætter afstanden mellem hvert link i navigationslinjen*/
-}
-
-.sidebar {
-    position: fixed; /* Placerer dropdown til højre på siden */
-    top: 0; /* Placerer dropdown over navigationslinjen */
-    right: 0; /* Placerer dropdown til højre på siden */
-    height: 100vh; /* Sørger for, at dropdown fylder fra top til bund*/
-    width: 250px; /* Sørger for, at dropdown fylder 250px i bredden */
-    z-index: 999; /* Sørger for, at dropdown overgår burgermenu-ikonet */
-    backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Giver dropdown en kant hele vejen rundt */
-    display: none; /* Vises ikke før skærmen er mobil-version (se mediaqueries )*/
-    flex-direction: column; /* Links i dropdown placeres i kolonne */
-    justify-content: flex-start;
-    text-decoration: none;
-}
-
-.menu-knap {
-    display: none; /* Burgermenu-ikonet vises ikke i desktopview*/
-}
-
-/* --------------------- STYLING AF NAVIGATION I MOBIL-VIEW --------------------- */
-
-@media(max-width: 1024px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-knap {
-        display: block;
-    }
 }
 
 .dropdown {
@@ -107,6 +80,48 @@ li {
     left: auto; /* Nulstiller left for at sikre korrekt placering */
 }
 
+/* --------------------- STYLING AF NAVIGATION I MOBIL-VIEW --------------------- */
+
+@media(max-width: 1024px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-knap {
+        display: block;
+    }
+}
+
+.sidebar {
+    display: none; /* Vises ikke før skærmen er mobil-version (se mediaqueries )*/
+    position: fixed; /* Placerer dropdown til højre på siden */
+    top: 0; /* Placerer dropdown over navigationslinjen */
+    right: 0; /* Placerer dropdown til højre på siden */
+    height: 100vh; /* Sørger for, at dropdown fylder fra top til bund*/
+    width: 250px; /* Sørger for, at dropdown fylder 250px i bredden */
+    z-index: 999; /* Sørger for, at dropdown overgår burgermenu-ikonet */
+    backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Giver dropdown en kant hele vejen rundt */
+    flex-direction: column; /* Links i dropdown placeres i kolonne */
+}
+
+.sidebar-kategori { /* Styling af alle kategorierne*/
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    padding: 5vh 0;
+}
+
+.undermenu-i-sidebar { /* Styling af de 'indre'kategorier*/
+    display: none; /* Underkategorierne vises ikke */
+    font-size: 1.5rem; /* Ændring af font-størrelse, så den ikke arver fra sin forældre */
+}
+
+.sidebar-kategori:hover .undermenu-i-sidebar {
+    display: block; /* Hvis man hover over kategorien i sidebar vil den tilhørende underkateogrier vises*/
+}
+
+
 /* --------------------- STYLING AF FORSIDE --------------------- */
 #forside-indhold {
     display: flex;
@@ -121,6 +136,39 @@ li {
 
 #forside-billede {
     width: 70vh; /* Billedets størrelse */
+}
+
+#pil-og-scroll {
+    display: none;
+}
+
+/* --------------------- STYLING AF FORSIDE I MOBIL-VIEW --------------------- */
+
+@media(max-width: 1024px) {
+
+    #forside-indhold {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #forside-tekst {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #forside-billede {
+        margin: auto;
+        padding: auto;
+        width: 50%;
+    }
+
+    #pil-og-scroll {
+        padding-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* --------------------- STYLING AF SORTIMENT-SIDE ---------------------*/
@@ -143,6 +191,9 @@ li {
     height: 50vh; /* Hvert billede fylder */
     padding: 0 5vh; /* Skaber afstand mellem billederne*/
 }
+
+/* --------------------- STYLING AF SORTIMENT I MOBIL-VIEW --------------------- */
+
 
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL ---------------------*/
 
@@ -188,6 +239,9 @@ li {
     text-decoration: underline; /* Linket til events i skovbær-øllen har underline for at tydeliggøre, at det er et link*/
 }
 
+/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL I MOBIL-VIEW --------------------- */
+
+
 /* --------------------- STYLING AF BRYGNINGSPROCES ---------------------*/
 
 #brygningsproces-indhold {
@@ -208,5 +262,72 @@ li {
     margin-top: -4vh; /* Skaber mindre afstand til billedet */
     color: grey; /* Får en grå farve så det ligner et link*/
     font-style: italic; /* Giver skråskrift så det ligner et link */
+}
+
+/* --------------------- STYLING AF BRYGNINGSPROCES I MOBIL-VIEW --------------------- */
+
+
+
+/* --------------------- STYLING AF FOOTER--------------------- */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-billede {
+    width: 20vh;
+}
+
+.venstre-side-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.højre-side-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#mobil-footer-links {
+    display: none;
+}
+
+.til-toppen-footer {
+    display: none;
+}
+
+/* --------------------- STYLING AF FOOTER I MOBIL-VIEW --------------------- */
+
+
+@media(max-width: 1025px) {
+    .venstre-side-footer, .højre-side-footer {
+        display: none;
+    }
+
+    .mobil-footer-links {
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column; /* Placerer teksten oven på hinanden*/
+        align-items: center; /* Placerer tekst med samme midterpunkt*/
+    }
+
+    .mobil-footer-knap {
+        margin: 2vh 12vh;
+        padding: 1.5vh 8vh;
+        background-color: var(--primaerFarve);
+        font-size: 2rem;
+    }
+
+    .til-toppen-footer {
+        display: block;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
 }
 
