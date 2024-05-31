@@ -29,15 +29,20 @@ li {
 
 .overskrift {
     text-align: center; /* Placerer overskriften på hver side det samme sted for at skabe kontinuitet */
-    padding: 2% 0 0;
     font-size: 5.5rem;
     font-weight: lighter;
+}
+
+@media(max-width: 1024px) {
+    .overskrift {
+        font-size: 3rem;
+    }
 }
 
 /* --------------------- STYLING AF NAVIGATION --------------------- */
 
 .zerobuzz-brew-logo {
-    width: 60vh;    
+    width: 60%;    
 }
 
 .menu-knap {
@@ -90,6 +95,10 @@ li {
     .menu-knap {
         display: block;
     }
+
+    .zerobuzz-brew-logo {
+        width: 80%; /* Logoet forstørres i mobil-view */
+    }
 }
 
 .sidebar {
@@ -97,8 +106,8 @@ li {
     position: fixed; /* Placerer dropdown til højre på siden */
     top: 0; /* Placerer dropdown over navigationslinjen */
     right: 0; /* Placerer dropdown til højre på siden */
-    height: 100vh; /* Sørger for, at dropdown fylder fra top til bund*/
-    width: 250px; /* Sørger for, at dropdown fylder 250px i bredden */
+    height: 100%; /* Sørger for, at dropdown fylder fra top til bund*/
+    width: 30%; /* Sørger for, at dropdown fylder 30% af skærmen */
     z-index: 999; /* Sørger for, at dropdown overgår burgermenu-ikonet */
     backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Giver dropdown en kant hele vejen rundt */
@@ -108,8 +117,7 @@ li {
 .sidebar-kategori { /* Styling af alle kategorierne*/
     position: relative;
     font-size: 2rem;
-    text-align: center;
-    padding: 5vh 0;
+    padding: 5vh 0; /* Afstand mellem hvert link */
 }
 
 .undermenu-i-sidebar { /* Styling af de 'indre'kategorier*/
@@ -132,6 +140,7 @@ li {
 
 #forside-tekst {
     font-size: 4.5rem; /* Skriftstørrelsen på teksten på forsiden */
+    font-weight: lighter;
 }
 
 #forside-billede {
@@ -164,29 +173,32 @@ li {
     }
 
     #pil-og-scroll {
-        padding-top: 2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    #sortiment-forside-id, #mest-solgte-forside-id {
+        display: none; /**/
+    }
 }
 
-/* --------------------- STYLING AF SORTIMENT-SIDE ---------------------*/
+/* --------------------- STYLING AF SORTIMENT-SIDE OG EVENTS-SIDE---------------------*/
 
-.sortiment-overblik {
+.sortiment-overblik, #events-overblik {
     display: flex; 
     flex-direction: row; /* De tre billeder på sortiementsiden placeres på række*/
     justify-content: center; /* Billederne placeres i midten*/
 }
 
-.sortimentbillede-og-tekst {
+.sortimentbillede-og-tekst, #eventsbillede-og-tekst {
     display: flex; 
     flex-direction: column; /* Sortimentbilledet og den tilhørene tekst placeres ovenpå hinanden */
     align-items: center; /* Teksten placeres i midten under det tilhørende billede */
     font-size: 1.5rem; /* Størrelsen på skriften */
 }
 
-.alkoholfri-oel-variant {
+.alkoholfri-oel-variant, .events-i-by-billede {
     width: 30vh; /* Hvert billede fylder */
     height: 50vh; /* Hvert billede fylder */
     padding: 0 5vh; /* Skaber afstand mellem billederne*/
@@ -194,37 +206,43 @@ li {
 
 /* --------------------- STYLING AF SORTIMENT I MOBIL-VIEW --------------------- */
 
+@media(max-width: 1024px) {
+    .sortiment-overblik, #events-overblik {
+        display: flex;
+        flex-direction: column; /* Stiller elementerne oven på hinanden i stedet for på række */
+    }
+}
 
-/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL ---------------------*/
+/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS ---------------------*/
 
-.pil-tilbage-til-sortiment {
+.pil-tilbage-til-sortiment, #pil-tilbage-til-events {
     margin-left: 10vh; /* Pilen tilbage til sortiment rykkes ind fra kanten*/
 }
 
-.alkoholfri-oel-variant-billede {
+.alkoholfri-oel-variant-billede, #aarhus-billede {
     width: 40vh; /* Bredden på billedet*/
     height: auto; 
 }
 
-.alkoholfri-oel-information {
+.alkoholfri-oel-information, #events-i-aarhus-information {
     display: flex; /* Placerer tekst og billede på linje */
     margin: 0 30vh; /* Al indhold placeres i midten af siden */
 }
 
-.alkoholfri-oel-tekstinformation {
+.alkoholfri-oel-tekstinformation, #events-i-aarhus-tekstinformation {
     display: flex;
     flex-direction: column; /* Al indhold placeres i midten af beholderen og stilles op i vertikal kolonne */
     margin-left: 2vh; /* Teksten rykkes til højre for billedet */
 }
 
-.alkoholfri-oel-overskrift {
+.alkoholfri-oel-overskrift, #events-i-aarhus-overskrift {
     font-weight: lighter; /* Overskiften bliver tyndere */
     font-size: 3.5rem; /* Størrelsen på overskriften */
     margin: 0; /* Fjerner al margin */
     align-self: center; /* Placerer overskriften i midten */
 }
 
-.knap-til-brygningsproces {
+.knap-til-brygningsproces, #knap-til-tilmelding {
     font-family: Sniglet, 'Times', sans-serif; /* Ændrer fonten i knappen */
     font-weight: bold; /* Gør fonten tykkere*/
     background-color: var(--primaerFarve); /* Sætter farven til den primære farve */
@@ -239,7 +257,9 @@ li {
     text-decoration: underline; /* Linket til events i skovbær-øllen har underline for at tydeliggøre, at det er et link*/
 }
 
-/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL I MOBIL-VIEW --------------------- */
+/* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS I MOBIL-VIEW --------------------- */
+
+
 
 
 /* --------------------- STYLING AF BRYGNINGSPROCES ---------------------*/
@@ -247,19 +267,18 @@ li {
 #brygningsproces-indhold {
     display: flex;
     flex-direction: column; /* Indholdet placeres oven på hianden*/
-    margin: 0 30vh; /* Placerer indholdet i midten */
+    margin: 0 20%; /* Sørger for en margin på 20% til hver side*/
 }
 
 #brygningsproces-billede {
     rotate: 90deg; /* Billedet er roteret */
-    margin-left: auto; /* Billedet placeres i midten */
-    margin-right: auto; /* Billedet placeres i midten */
-    width: 50%; /* Billedet placeres i midten */
+    margin: auto;
+    padding: auto;
+    width: 70%; /* Billedet placeres i midten */
 }
 
 #brygningsproces-billede-reference {
     text-align: center; /* Placeres under billedet */
-    margin-top: -4vh; /* Skaber mindre afstand til billedet */
     color: grey; /* Får en grå farve så det ligner et link*/
     font-style: italic; /* Giver skråskrift så det ligner et link */
 }
@@ -269,26 +288,15 @@ li {
 
 
 /* --------------------- STYLING AF FOOTER--------------------- */
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
-
 .footer-billede {
-    width: 20vh;
+    width: 20%;
 }
 
-.venstre-side-footer {
+.midter-footer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
-
-.højre-side-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center; /* Tekst har samme midterpunkt */
 }
 
 #mobil-footer-links {
@@ -299,14 +307,19 @@ li {
     display: none;
 }
 
+.mobil-footer-links {
+    display: none;
+}
+
 /* --------------------- STYLING AF FOOTER I MOBIL-VIEW --------------------- */
 
 
 @media(max-width: 1025px) {
-    .venstre-side-footer, .højre-side-footer {
+
+    .midter-footer {
         display: none;
     }
-
+    
     .mobil-footer-links {
         margin-top: 10vh;
         display: flex;
@@ -315,7 +328,7 @@ li {
     }
 
     .mobil-footer-knap {
-        margin: 2vh 12vh;
+        margin: 2vh 0;
         padding: 1.5vh 8vh;
         background-color: var(--primaerFarve);
         font-size: 2rem;
@@ -325,9 +338,5 @@ li {
         display: block;
     }
 
-    .footer {
-        display: flex;
-        justify-content: center;
-    }
 }
 
