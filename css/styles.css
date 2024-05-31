@@ -224,7 +224,7 @@ li {
     height: auto; 
 }
 
-.alkoholfri-oel-information, #events-i-aarhus-information {
+.alkoholfri-oel-information, .events-i-aarhus-information {
     display: flex; /* Placerer tekst og billede på linje */
     margin: 0 30vh; /* Al indhold placeres i midten af siden */
 }
@@ -259,7 +259,23 @@ li {
 
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS I MOBIL-VIEW --------------------- */
 
+.specifik-sortiment-og-event {
+    display: none;
+}
 
+@media(max-width: 1024px) {
+    .events-i-aarhus-information, .alkoholfri-oel-information {
+        display: none;
+    }
+
+    .specifik-sortiment-og-event {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
 
 
 /* --------------------- STYLING AF BRYGNINGSPROCES ---------------------*/
