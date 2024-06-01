@@ -35,14 +35,14 @@ li {
 
 @media(max-width: 1024px) {
     .overskrift {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
 
 /* --------------------- STYLING AF NAVIGATION --------------------- */
 
 .zerobuzz-brew-logo {
-    width: 60%;    
+    width: 60vh;    
 }
 
 .menu-knap {
@@ -106,10 +106,10 @@ li {
     position: fixed; /* Placerer dropdown til højre på siden */
     top: 0; /* Placerer dropdown over navigationslinjen */
     right: 0; /* Placerer dropdown til højre på siden */
-    height: 100%; /* Sørger for, at dropdown fylder fra top til bund*/
-    width: 30%; /* Sørger for, at dropdown fylder 30% af skærmen */
+    height: 75%; /* Sørger for, at dropdown fylder fra top til bund*/
+    width: 50%; /* Sørger for, at dropdown fylder 30% af skærmen */
     z-index: 999; /* Sørger for, at dropdown overgår burgermenu-ikonet */
-    backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
+    /* backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Giver dropdown en kant hele vejen rundt */
     flex-direction: column; /* Links i dropdown placeres i kolonne */
 }
@@ -122,7 +122,7 @@ li {
 
 .undermenu-i-sidebar { /* Styling af de 'indre'kategorier*/
     display: none; /* Underkategorierne vises ikke */
-    font-size: 1.5rem; /* Ændring af font-størrelse, så den ikke arver fra sin forældre */
+    font-size: 1.4rem; /* Ændring af font-størrelse, så den ikke arver fra sin forældre */
 }
 
 .sidebar-kategori:hover .undermenu-i-sidebar {
