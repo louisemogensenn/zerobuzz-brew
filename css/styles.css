@@ -257,6 +257,56 @@ li {
     text-decoration: underline; /* Linket til events i skovbær-øllen har underline for at tydeliggøre, at det er et link*/
 }
 
+/* --------------------- STYLING AF TILMELDINGSFORMULAR OG TAK FOR DIN TILMELDING-SIDE --------------------- */
+.tilmeldingsformular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#tak-for-din-tilmelding-indhold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--primaerFarve);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    font-size: 1.5rem;
+}
+
+
+
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS I MOBIL-VIEW --------------------- */
 
 .specifik-sortiment-og-event {
