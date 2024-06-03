@@ -3,7 +3,6 @@
 /* --------------------- STYLING, DER GÆLDER FOR ALLE SIDER --------------------- */
 * {
     font-family: DM Sans, 'Times', Arial, sans-serif;
-    /* font-family: Sniglet, 'Times', sans-serif; */
     background-color: var(--sekundaerFarve); /* Indstiller baggrundsfarven for all HTML-filer, der er linket til denne CSS*/
 }
 
@@ -165,13 +164,7 @@ li {
         font-size: 3rem;
         text-align: center;
     }
-
-    #forside-billede {
-        margin: auto;
-        padding: auto;
-        width: 50%;
-    }
-
+    
     #pil-og-scroll {
         display: flex;
         flex-direction: column;
@@ -219,7 +212,7 @@ li {
     margin-left: 10vh; /* Pilen tilbage til sortiment rykkes ind fra kanten*/
 }
 
-.alkoholfri-oel-variant-billede, #aarhus-billede {
+.alkoholfri-oel-variant-billede, .aarhus-billede {
     width: 40vh; /* Bredden på billedet*/
     height: auto; 
 }
@@ -235,14 +228,14 @@ li {
     margin-left: 2vh; /* Teksten rykkes til højre for billedet */
 }
 
-.alkoholfri-oel-overskrift, #events-i-aarhus-overskrift {
+.alkoholfri-oel-overskrift, .events-i-aarhus-overskrift {
     font-weight: lighter; /* Overskiften bliver tyndere */
     font-size: 3.5rem; /* Størrelsen på overskriften */
     margin: 0; /* Fjerner al margin */
     align-self: center; /* Placerer overskriften i midten */
 }
 
-.knap-til-brygningsproces, #knap-til-tilmelding {
+.knap-til-brygningsproces, .knap-til-tilmelding {
     font-family: Sniglet, 'Times', sans-serif; /* Ændrer fonten i knappen */
     font-weight: bold; /* Gør fonten tykkere*/
     background-color: var(--primaerFarve); /* Sætter farven til den primære farve */
@@ -253,7 +246,7 @@ li {
     align-self: center; /* 'Knappen' placeres i midten af beholderen*/
 }
 
-#link-til-events {
+.link-til-events {
     text-decoration: underline; /* Linket til events i skovbær-øllen har underline for at tydeliggøre, at det er et link*/
 }
 
@@ -279,11 +272,13 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
+
 input[type="text"], input[type="email"], input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -292,6 +287,7 @@ input[type="text"], input[type="email"], input[type="number"] {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -301,10 +297,10 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
 }
+
 input[type="submit"]:hover {
     font-size: 1.5rem;
 }
-
 
 
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS I MOBIL-VIEW --------------------- */
@@ -325,6 +321,10 @@ input[type="submit"]:hover {
         align-items: center;
     }
 
+    .alkoholfri-oel-information, .events-i-aarhus-information {
+        margin: 0 20vh;
+    }
+
 }
 
 
@@ -337,9 +337,7 @@ input[type="submit"]:hover {
 }
 
 #brygningsproces-billede {
-    rotate: 90deg; /* Billedet er roteret */
     margin: auto;
-    padding: auto;
     width: 70%; /* Billedet placeres i midten */
 }
 
@@ -365,10 +363,6 @@ input[type="submit"]:hover {
     align-items: center; /* Tekst har samme midterpunkt */
 }
 
-#mobil-footer-links {
-    display: none;
-}
-
 .til-toppen-footer {
     display: none;
 }
@@ -389,15 +383,7 @@ input[type="submit"]:hover {
     .mobil-footer-links {
         margin-top: 10vh;
         display: flex;
-        flex-direction: column; /* Placerer teksten oven på hinanden*/
-        align-items: center; /* Placerer tekst med samme midterpunkt*/
-    }
-
-    .mobil-footer-knap {
-        margin: 2vh 0;
-        padding: 1.5vh 8vh;
-        background-color: var(--primaerFarve);
-        font-size: 2rem;
+        justify-content: space-around;
     }
 
     .til-toppen-footer {
