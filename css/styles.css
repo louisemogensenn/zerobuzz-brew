@@ -106,7 +106,7 @@ li {
     top: 0; /* Placerer dropdown over navigationslinjen */
     right: 0; /* Placerer dropdown til højre på siden */
     height: 75%; /* Sørger for, at dropdown fylder fra top til bund*/
-    width: 50%; /* Sørger for, at dropdown fylder 30% af skærmen */
+    width: 30%; /* Sørger for, at dropdown fylder 30% af skærmen */
     z-index: 999; /* Sørger for, at dropdown overgår burgermenu-ikonet */
     /* backdrop-filter: blur(10px); /* Sørger for, at dropdown overgår burgermenu-ikonet */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Giver dropdown en kant hele vejen rundt */
