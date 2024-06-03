@@ -34,14 +34,14 @@ li {
 
 @media(max-width: 1024px) {
     .overskrift {
-        font-size: 2rem;
+        font-size: 4rem; /* Størrelsen på fonte i mobil-view*/
     }
 }
 
 /* --------------------- STYLING AF NAVIGATION --------------------- */
 
 .zerobuzz-brew-logo {
-    width: 60vh;    
+    width: 60vh; /* Logoets størrelse */
 }
 
 .menu-knap {
@@ -88,11 +88,11 @@ li {
 
 @media(max-width: 1024px) {
     .hideOnMobile {
-        display: none;
+        display: none; /* Sidebar vises ikke i desktop */
     }
 
     .menu-knap {
-        display: block;
+        display: block; /* Burgermenu vises i mobile */
     }
 
     .zerobuzz-brew-logo {
@@ -139,7 +139,6 @@ li {
 
 #forside-tekst {
     font-size: 4.5rem; /* Skriftstørrelsen på teksten på forsiden */
-    font-weight: lighter;
 }
 
 #forside-billede {
@@ -147,7 +146,7 @@ li {
 }
 
 #pil-og-scroll {
-    display: none;
+    display: none; /* Vises kun i mobile-view */
 }
 
 /* --------------------- STYLING AF FORSIDE I MOBIL-VIEW --------------------- */
@@ -155,24 +154,28 @@ li {
 @media(max-width: 1024px) {
 
     #forside-indhold {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: flex; 
+        flex-direction: column; /* Al forsideindhold stilles oven på hinanden */
     }
 
     #forside-tekst {
-        font-size: 3rem;
-        text-align: center;
+        font-size: 3rem; /* Skriftstørrelsen gøres mindre */
+        text-align: center; /* Teksten har samme 'midterpunkt' */
     }
     
     #pil-og-scroll {
-        display: flex;
+        display: flex; /* I mobil-view stilles pilen og scroll oven på hinanden */
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Fil og tekst placeres i midten */
     }
 
-    #sortiment-forside-id, #mest-solgte-forside-id {
-        display: none; /**/
+    #sortiment-forside-id {
+        display: flex;
+        flex-direction: column; /* I mobil-view stilles mest solgte-billeder oven på hinanden*/
+    }
+
+    #mest-solgte-forside-id {
+        font-size: 4rem; /* Overskriften MEST SOLGTE få en større font-størrelse */
     }
 }
 
@@ -197,7 +200,7 @@ li {
     padding: 0 5vh; /* Skaber afstand mellem billederne*/
 }
 
-/* --------------------- STYLING AF SORTIMENT I MOBIL-VIEW --------------------- */
+/* --------------------- STYLING AF SORTIMENT I MOBIL-VIEW OG--------------------- */
 
 @media(max-width: 1024px) {
     .sortiment-overblik, #events-overblik {
@@ -253,76 +256,73 @@ li {
 /* --------------------- STYLING AF TILMELDINGSFORMULAR OG TAK FOR DIN TILMELDING-SIDE --------------------- */
 .tilmeldingsformular {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Indholdet stilles oven på hinanden */
+    align-items: center; /* Indholdet stilles i midten*/
+    text-align: center; /* Teksten stilles i midten */
 }
 
 #tak-for-din-tilmelding-indhold {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
+    flex-direction: column; /* Teksten stilles oven på hinanden */
+    align-items: center; /* Teksten stilles i midten */
 }
 
 form {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border: 1px solid #ccc; /* Laver kant rundt om tilmeldingsboksen*/
+    padding: 20px; /* Skaber afstand til kanten */
+    border-radius: 10px; /* Giver boksen bløde kanter */
+    width: 300px; /* Bredden på boksekanten */
 }
 
 label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+    font-weight: bold; /* Teksten inden i boksen bliver fed*/
 }
 
 input[type="text"], input[type="email"], input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%; /* Bredden på inputboksen er ens og fylder 100% inden for tilmeldingsboksen */
+    padding: 10px; /* Højden på inputboksen er ens */
+    margin-bottom: 15px; /* Skaber afstand mellem alle inputbokse */
+    border: 1px solid #ccc; /* Inputboksens kanter styles */
+    border-radius: 5px; /* Kanterne på inputboksene bliver runde */
+    box-sizing: border-box; /* Inputbokse bliver i boksen */
 }
 
 input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: var(--primaerFarve);
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    width: 100%; /* Bredden på tilmeldings-knappen fylder 100% af tilmeldingsboksen */
+    padding: 10px; /* Højden på tilmeldings-knappen */
+    border: none; /* Kanten på knappen fjernes */
+    background-color: var(--primaerFarve); /* Knappen gøres orange */
+    color: var(--sekundaerFarve); /* Skriftfarven */
+    cursor: pointer; /* Ved hover over knappen bliver det til en pegende hånd */
+    border-radius: 5px; /* Kanterne gøres runde */
+    font-size: 1.5rem;
 }
 
 input[type="submit"]:hover {
-    font-size: 1.5rem;
+    font-weight: bolder; /* Tekststørrelsen gøres federe ved hover*/
 }
 
 
 /* --------------------- STYLING AF INDIVIDUEL ALKOHOLFRI ØL OG EVENTS I AARHUS I MOBIL-VIEW --------------------- */
 
 .specifik-sortiment-og-event {
-    display: none;
+    display: none; /* Vises ikke i desktop */
 }
 
 @media(max-width: 1024px) {
     .events-i-aarhus-information, .alkoholfri-oel-information {
-        display: none;
+        display: none; /* Vises ikke i mobil-view*/
     }
 
     .specifik-sortiment-og-event {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: column; /* Indholdet stilles oven på hinanden */
+        justify-content: center; /* Indholdet placeres i midten */
         align-items: center;
     }
 
     .alkoholfri-oel-information, .events-i-aarhus-information {
-        margin: 0 20vh;
+        margin: 0 20vh; /* Den bredde som teksten fylder i mobil-view */
     }
 
 }
@@ -349,26 +349,34 @@ input[type="submit"]:hover {
 
 /* --------------------- STYLING AF BRYGNINGSPROCES I MOBIL-VIEW --------------------- */
 
+/* --------------------- STYLING AF BAG OM ---------------------*/
+.bag-om-billedgalleri {
+    width: 30%; /* Giver alle billeder på siden samme størrelse */
+    padding: 10px; /* Skaber større afstand mellem billederne */
+}
 
+figure.scroll-container {
+    overflow: auto; /* Gør, at siden står fast og at det er hjulet, der rykker sig. Hvis denne ikke er til bliver siden bredere til højre */
+    white-space: nowrap; /* Placerer billederne på linje */
+}
 
 /* --------------------- STYLING AF FOOTER--------------------- */
 .footer-billede {
-    width: 20%;
+    width: 20%; /* Billedet størrelse i footer i desktop */
 }
 
 .midter-footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Teksten stilles oven på hinanden */
     align-items: center; /* Tekst har samme midterpunkt */
 }
 
 .til-toppen-footer {
-    display: none;
+    display: none; /* Vises ikke i desktop-view */
 }
 
 .mobil-footer-links {
-    display: none;
+    display: none; /* Vises ikke i desktop-view */
 }
 
 /* --------------------- STYLING AF FOOTER I MOBIL-VIEW --------------------- */
@@ -377,17 +385,17 @@ input[type="submit"]:hover {
 @media(max-width: 1025px) {
 
     .midter-footer {
-        display: none;
+        display: none; /* Vises ikke i mobil-view */
     }
     
     .mobil-footer-links {
-        margin-top: 10vh;
+        margin-top: 10vh; /* Afstand til toppen */
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; /* Placerer links med afstand til hinanden */
     }
 
     .til-toppen-footer {
-        display: block;
+        display: block; /* Pil, der linker til toppen vises i mobil-view */
     }
 
 }
